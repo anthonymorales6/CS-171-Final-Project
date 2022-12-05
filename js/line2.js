@@ -7,20 +7,20 @@ var padding = 100;
 var formatTime = d3.timeFormat("%Y");
 var parseTime = d3.timeParse(formatTime);
 
-let twoptpct = d3.csv("data/Short List Team Totals 2.csv", d => {
+let numwin = d3.csv("data/Spurs Wins.csv", d => {
     d.season = parseTime(d.season)
-    d.x2p_percent = +d.x2p_percent
+    d.w = +d.w
     return d
 }).then(data => {
     console.log(data)
-    lineDraw(data)
+    lineDraw2(data)
 })
 
-function lineDraw(data) {
+function lineDraw2(data) {
 
     // begin displaying data at default selected season
 
-    let svg = d3.select("#line1")
+    let svg = d3.select("#line2")
         .append("svg")
         .attr("height", height)
         .attr("width", width)
@@ -31,8 +31,8 @@ function lineDraw(data) {
     let max_season = d3.max(data, function (d) {
         return d.season
     })
-    let max_x2p_percent = d3.max(data, function (d) {
-        return d.x2p_percent
+    let max_w = d3.max(data, function (d) {
+        return d.w
     })
 
     // Create xScale for seasons
@@ -42,7 +42,7 @@ function lineDraw(data) {
 
     // Create yScale for 2-point percentages
     let yScale = d3.scaleLinear()
-        .domain([0.45, max_x2p_percent])
+        .domain([0.45, max_w])
         .range([height - padding, padding])
 
     // Create xAxis using xScale
@@ -68,7 +68,7 @@ function lineDraw(data) {
         .call(yAxis)
 
     svg.append("text")
-        .attr("x", 220)
+        .attr("x", 225)
         .attr("y", 360)
         .attr("font-size", "big")
         .attr("text-anchor", "end")
@@ -76,12 +76,12 @@ function lineDraw(data) {
 
     svg.append("text")
         .attr("text-anchor", "end")
-        .attr("x", -1.25 * padding)
-        .attr("y", padding - 70)
+        .attr("x", -1.35 * padding)
+        .attr("y", padding - 60)
         .attr("dy", ".75em")
         .attr("transform", "rotate(-90)")
         .attr("font-size", "big")
-        .text("2-point percentage")
+        .text("Number of Wins")
 
     // Path for line graph
     let pathSelect = svg
@@ -92,7 +92,7 @@ function lineDraw(data) {
     let line = d3.line()
         .curve(d3.curveBasis)
         .x(d => xScale(d.season))
-        .y(d => yScale(d.x2p_percent))
+        .y(d => yScale(d.w))
 
     // let line2 = svg.selectAll(".line")
     //     .data(data2)
@@ -124,5 +124,4 @@ function lineDraw(data) {
         .attr("stroke", function (d) {
             return 'black'
         });
-    }
-
+}
