@@ -13,6 +13,6 @@ For the technical aspect of this project, we referenced labs/homeworks from thro
 and help on implementation of some more complex visualizations. We employed d3 and bootstrap to bolster the interactivity and presentation of our website. Most of our graphs are interactive, and we made sure to include a notice so our users know when there is more information to uncover. We hope you enjoy this project as much as we enjoyed implementing it; our team
 felt that it shed some light on the effective yet understated way the Spurs play basketball.
 
-Link to website:
+Link to website: https://anthonymorales6.github.io.
 
 Link to video:
