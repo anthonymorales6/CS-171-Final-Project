@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<h1>A Deep Dive Into the Success Behind the San Antonio Spurs</h1>
+<h1 id="title">A Deep Dive Into the Success Behind the San Antonio Spurs</h1>
 
 <div class="box" id="intro">
     <div class="container text-center">
@@ -16,33 +16,82 @@
             </div>
             <div class="col">
                 <h1>Background</h1>
-                <p>Teams in the NBA are always looking to find an edge over their opponents;
-                    this comes in the form of advanced statistics, team culture, coaching staff, and player personnel.
-                    With that being said, what metrics have had the highest correlation on a team's success?
-                    Are the San Antonio Spurs be a blueprint to follow?</p>
+                <p>Text</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="box">
+<div class="box" id="intro">
     <div class="container text-center">
         <div class="row">
-            <div class="col" id="scatter1">
-                <h1>Who's the most balanced?</h1>
+            <div class="col">
+                <h1>Coach</h1>
+                <img id="coach" src="img/">
+            </div>
+            <div class="col-7">
+                <h1>Most Notable Players</h1>
+                <div class="row row-cols-3">
+                    <div class="col">
+                        <img src="img/timduncan.webp">
+                        <h3>Tim Duncan</h3>
+                    </div>
+                    <div class="col">
+                        <img src="img/manugindoili.webp">
+                        <h3>Manu Gindoili</h3>
+                    </div>
+                    <div class="col">
+                        <img src="img/tonyparker.png">
+                        <h3>Tony Parker</h3>
+                    </div>
+                    <div class="col">
+                        <img src="img/davidrobinson.webp">
+                        <h3>David Robinson</h3>
+                    </div>
+                    <div class="col">
+                        <img src="img/kawhileonard.webp">
+                        <h3>Kawhi Leonard</h3>
+                    </div>
+                    <div class="col">
+                        <img src="img/dannygreen.webp">
+                        <h3>Danny Green</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="body">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
             </div>
             <div class="col">
                 <h1>Title</h1>
-                <p>One of the greatest difficulties in constructing a roster is team fit. What players will complement the
-                system set in place by the head coach? How will said system prioritize offense over defense, or vice versa?
-                The San Antonio Spurs have done an exceptional job in establishing an elite defense while maintaining
-                a historically efficient offense. Click on the points to see more information for each plotted team!</p>
+                <p>Description</p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="box 2">
+<div class="box" id="body">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col" id="scatter1"></div>
+            <div class="col">
+                <h1>Balance is key</h1>
+                <p>One of the greatest difficulties in constructing a roster is team fit. What players will complement the
+                system set in place by the head coach? How will said system prioritize offense over defense, or vice versa?
+                The San Antonio Spurs have done an exceptional job in establishing an elite defense while maintaining
+                a historically efficient offense.</p>
+                <p>Click on the points to find out more information about each team</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="box" id="body">
     <div class="container text-center">
         <div class="row">
             <div class="col" id="scatter2">
@@ -58,10 +107,10 @@
     </div>
 </div>
 
-<div class="box 3">
+<div class="box" id="body">
     <div class="container text-center">
         <div class="row">
-            <div class="col" id="line1">
+            <div class="col" id="bubble">
                 <h1>Visualization #3</h1>
             </div>
             <div class="col">
@@ -79,7 +128,7 @@
 <script defer src ="js/main.js"></script>
 <script src="js/scatter.js"></script>
 <script src="js/line.js"></script>
-<script src="js/bar.js"></script>
+<script src="js/bubble.js"></script>
 
 </body>
 </html>
