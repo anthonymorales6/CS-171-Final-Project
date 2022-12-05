@@ -9,14 +9,16 @@
     text-transform: uppercase;
 }
 
+#title{
+    padding-top: 20px;
+}
+
 body{
-    background-color: grey;
     font-family: Sablon Up;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0;
     overflow-x: hidden;
     letter-spacing: 0.2px;
 }
@@ -25,11 +27,19 @@ body h1{
     color: black;
     font-size: 54px;
     text-transform: uppercase;
-    margin: 30px;
     letter-spacing: 1px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    text-shadow: 2px 2px 0px white;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+body h3{
+    color: black;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 0px rgb(196, 206, 211);
+    padding-top: 10px;
 }
 
 .box{
@@ -39,7 +49,7 @@ body h1{
     align-items: center;
     justify-content: center;
     width: 1250px;
-    height: 600px;
+    height: 625px;
     margin: 10px;
     border-radius: 20px;
     box-shadow: 2px 2px 15px rgb(196, 206, 211);
@@ -58,7 +68,7 @@ body h1{
 }
 
 .box h2{
-    font-size: 45px;
+    font-size: 50px;
     text-shadow: 2px 2px 3px black;
 }
 
@@ -69,10 +79,32 @@ body h1{
 div .tooltip{
     color: black;
     font-family: "Sablon Up";
+    font-size: 15px;
 }
+
 
 p{
     color: black;
     text-shadow: 2px 2px 0px rgb(196, 206, 211);
     letter-spacing: 1px;
+    padding-top: 75px;
+    font-size: 20px;
+    padding-right: 25px;
 }
+
+#coach{
+    width: 400px;
+    height: 400px;
+}
+
+.row-cols-3 img{
+    width: 200px;
+    height: 150px;
+/*    border-width: 5px;
+    border-radius: 25px;
+    border-style: solid;
+    border-color: rgb(196, 206, 211);*/
+}
+
+
+
