@@ -87,15 +87,7 @@ function barDraw(data) {
         .data(sel_data)
         .enter().append("rect")
         .attr("class", "bar")
-        .attr("fill", function(d){
-            if (d.team === "San Antonio Spurs") {
-                return "#EF426F"
-            }
-            else {
-                return "black"
-            }
-        })
-
+        .attr("fill", "black")
         .attr("x", x(0))
         .attr("y", function (d) {
             return y(d.abbreviation);
