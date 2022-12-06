@@ -15,4 +15,4 @@ felt that it shed some light on the effective yet understated way the Spurs play
 
 Link to website: https://anthonymorales6.github.io.
 
-Link to video:
+Link to video: https://drive.google.com/drive/folders/1ep-wVUqzDCGGBxEBPlfS7u1v7KlGcn-2?usp=share_link
