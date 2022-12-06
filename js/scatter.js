@@ -210,7 +210,14 @@ function draw(data) {
         return oppfgScale(d.avg_opp_fg_percent)
       })
       .attr("r", 4)
-      .attr("fill", "black")
+      .attr("fill", function(d){
+        if (d.team === "San Antonio Spurs") {
+          return "#EF426F"
+        }
+        else {
+          return "black"
+        }
+      })
       .attr("stroke", "white")
       .attr("fill-opacity", 0.5)
       .on("click", mouseover)
@@ -228,7 +235,14 @@ function draw(data) {
         return ptScale(d.tot_pts)
       })
       .attr("r", 4)
-      .attr("fill", "black")
+      .attr("fill", function(d){
+        if (d.team === "San Antonio Spurs") {
+          return "#EF426F"
+        }
+        else {
+          return "black"
+        }
+      })
       .attr("stroke", "white")
       .attr("fill-opacity", 0.5)
       .on("click", mouseover2)

@@ -83,7 +83,6 @@ function poDraw(data){
         .attr("x2", x(0))
         .attr("y1", function(d) { return y(d.abbr); })
         .attr("y2", function(d) { return y(d.abbr); })
-        .attr("fill", "black")
         .attr("stroke", "black")
 
 // Circles
@@ -94,7 +93,14 @@ function poDraw(data){
         .attr("cx",x(0))
         .attr("cy", function(d) { return y(d.abbr); })
         .attr("r", "5")
-        .style("fill", "black")
+        .attr("fill", function(d){
+            if (d.abbr === "SAS") {
+                return "#EF426F"
+            }
+            else {
+                return "black"
+            }
+        })
         .attr("stroke", "white")
         .attr("opacity", 1)
         .on("click", mouseover)

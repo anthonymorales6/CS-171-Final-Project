@@ -51,7 +51,6 @@ function barDraw(data) {
     });
 
     // Append svg drawing area
-
     let w_svg = d3.select("#bar")
         .append("svg")
         .attr("width", width + margin.left + margin.right)
@@ -88,6 +87,15 @@ function barDraw(data) {
         .data(sel_data)
         .enter().append("rect")
         .attr("class", "bar")
+        .attr("fill", function(d){
+            if (d.team === "San Antonio Spurs") {
+                return "#EF426F"
+            }
+            else {
+                return "black"
+            }
+        })
+
         .attr("x", x(0))
         .attr("y", function (d) {
             return y(d.abbreviation);
